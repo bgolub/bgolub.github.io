@@ -25,4 +25,16 @@
 
   {% include language.html %}
 
+  {% if sidebar.range %}
+  <div class="range-container container-block">
+
+    <h2 class="container-block-title">
+      Vocal Range
+    </h2>
+
+    <p>{{ sidebar.range }}</p>
+
+  </div>
+  {% endif %}
+
 </div><!--//sidebar-wrapper-->
