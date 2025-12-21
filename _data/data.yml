@@ -298,6 +298,11 @@ opera_experience:
   intro: >
     
   list:
+  - production: "Madama Butterfly"
+    role: "Ensemble"
+    company: "Opera San Jose"
+    conductor: "Joseph Marcheso"
+    director: "Michelle Cuizon"
   - production: "The Red Mill"
     role: "Tina"
     company: "Lyric Theatre San Jose"
@@ -313,6 +318,7 @@ opera_experience:
     company: "West Bay Opera"
     conductor: "José Luis Moscovich"
     director: "Richard Harrell"
+
 
 concert_experience:
   title: Concert Experience
