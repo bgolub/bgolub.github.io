@@ -1,0 +1,32 @@
+{% assign concert = site.data.data.concert_experience %}
+{% if concert %}
+<section class="section concert-section">
+
+  <h2 class="section-title">
+    <span class="fa-stack fa-xs">
+      <i class="fas fa-circle fa-stack-2x"></i>
+      <i class="fas fa-music fa-stack-1x fa-inverse"></i>
+    </span>
+    {{ concert.title }}
+  </h2>
+
+  {% if concert.intro %}
+  <div class="intro">
+    <p>{{ concert.intro }}</p>
+  </div>
+  {% endif %}
+
+  {% for item in concert.list %}
+  <div class="item">
+    <strong class="work">{{ item.program }}</strong>
+    {% if item.role %} — <em class="role">{{ item.role }}</em>{% endif %}
+    {% if item.ensemble %} <span class="meta">{{ item.ensemble }}</span>{% endif %}
+    {% if item.date %} <span class="meta">({{ item.date }})</span>{% endif %}
+    {% if item.notes %}
+    <div class="details">{{ item.notes }}</div>
+    {% endif %}
+  </div>
+  {% endfor %}
+
+</section>
+{% endif %}

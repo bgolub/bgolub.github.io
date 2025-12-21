@@ -4,21 +4,18 @@ layout: default
 
 
 {% include career-profile.html %}
+{% include about.html %}
+
+{% include opera-experience.html %}
+
+{% include concert-experience.html %}
+
+{% include awards.html %}
+
+{% include training-education.html %}
 
 {% unless site.data.data.sidebar.education %}
   {% include education.html %}
 {% endunless %}
 
-{% include experiences.html %}
-
-{% include certifications.html %}
-
-{% include projects.html %}
-
-{% include oss-contributions.html %}
-
-{% include publications.html %}
-
-{% include recommendations.html %}
-
-{% include skills.html %}
+{% include contact.html %}

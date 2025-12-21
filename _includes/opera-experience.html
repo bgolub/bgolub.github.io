@@ -1,0 +1,32 @@
+{% assign opera = site.data.data.opera_experience %}
+{% if opera %}
+<section class="section opera-section">
+
+  <h2 class="section-title">
+    <span class="fa-stack fa-xs">
+      <i class="fas fa-circle fa-stack-2x"></i>
+      <i class="fas fa-theater-masks fa-stack-1x fa-inverse"></i>
+    </span>
+    {{ opera.title }}
+  </h2>
+
+  {% if opera.intro %}
+  <div class="intro">
+    <p>{{ opera.intro }}</p>
+  </div>
+  {% endif %}
+
+  {% for item in opera.list %}
+  <div class="item">
+    <strong class="work">{{ item.work }}</strong>
+    {% if item.role %} — <em class="role">{{ item.role }}</em>{% endif %}
+    {% if item.company %} <span class="meta">{{ item.company }}</span>{% endif %}
+    {% if item.date %} <span class="meta">({{ item.date }})</span>{% endif %}
+    {% if item.notes %}
+    <div class="details">{{ item.notes }}</div>
+    {% endif %}
+  </div>
+  {% endfor %}
+
+</section>
+{% endif %}
