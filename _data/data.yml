@@ -296,7 +296,7 @@ events:
 opera_experience:
   title: Opera / Operetta Experience
   intro: >
-    Selected opera and operetta roles performed.
+    
   list:
   - production: "The Red Mill"
     role: "Tina"
@@ -317,7 +317,7 @@ opera_experience:
 concert_experience:
   title: Concert Experience
   intro: >
-    Concert and recital appearances.
+    
   list:
   - title: "Broadway by the Decade"
     role: "Soloist"
@@ -333,7 +333,7 @@ concert_experience:
 awards:
   title: Awards
   intro: >
-    Selected competition results and honors.
+    
   list:
   - title: "First Place, Advanced Category — Cal-Western NATS Musical Theater Student Auditions"
     year: 2024
@@ -353,7 +353,7 @@ awards:
 training_and_education:
   title: Training & Education
   intro: >
-    Formal education, voice teachers and additional skills.
+    
   list:
   - institution: "Case Western Reserve University"
     degree: "Bachelor of Arts in Voice, Psychology"
