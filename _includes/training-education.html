@@ -28,6 +28,15 @@
     </li>
   {% endfor %}
   </ul>
+</br>
+  {% if training.notes %}
+  <div class="training-notes">
+    <h4>Voice teachers & coaches</h4>
+    <div class="details">
+      {{ training.notes | newline_to_br }}
+    </div>
+  </div>
+  {% endif %}
 
 </section>
 {% endif %}

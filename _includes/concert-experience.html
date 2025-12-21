@@ -18,12 +18,15 @@
 
   {% for item in concert.list %}
   <div class="item">
-    <strong class="work">{{ item.program }}</strong>
-    {% if item.role %} — <em class="role">{{ item.role }}</em>{% endif %}
-    {% if item.ensemble %} <span class="meta">{{ item.ensemble }}</span>{% endif %}
-    {% if item.date %} <span class="meta">({{ item.date }})</span>{% endif %}
+    <h3 class="work">{{ item.title | default: item.program }}</h3>
+    <p class="meta">
+      {% if item.role %}<strong>Role:</strong> {{ item.role }}{% endif %}
+      {% if item.company %} &nbsp;|&nbsp; <strong>Company/Ensemble:</strong> {{ item.company }}{% elsif item.ensemble %} &nbsp;|&nbsp; <strong>Ensemble:</strong> {{ item.ensemble }}{% endif %}
+      {% if item.music_director %} &nbsp;|&nbsp; <strong>Music Director:</strong> {{ item.music_director }}{% elsif item.conductor %} &nbsp;|&nbsp; <strong>Conductor:</strong> {{ item.conductor }}{% endif %}
+      {% if item.date %} &nbsp;|&nbsp; <strong>Date:</strong> {{ item.date }}{% endif %}
+    </p>
     {% if item.notes %}
-    <div class="details">{{ item.notes }}</div>
+      <div class="details">{{ item.notes }}</div>
     {% endif %}
   </div>
   {% endfor %}

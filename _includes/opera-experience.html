@@ -18,12 +18,16 @@
 
   {% for item in opera.list %}
   <div class="item">
-    <strong class="work">{{ item.work }}</strong>
-    {% if item.role %} — <em class="role">{{ item.role }}</em>{% endif %}
-    {% if item.company %} <span class="meta">{{ item.company }}</span>{% endif %}
-    {% if item.date %} <span class="meta">({{ item.date }})</span>{% endif %}
+    <h3 class="work">{{ item.production | default: item.work }}</h3>
+    <p class="meta">
+      {% if item.role %}<strong>Role:</strong> {{ item.role }}{% endif %}
+      {% if item.company %} &nbsp;|&nbsp; <strong>Company:</strong> {{ item.company }}{% endif %}
+      {% if item.conductor %} &nbsp;|&nbsp; <strong>Conductor:</strong> {{ item.conductor }}{% endif %}
+      {% if item.director %} &nbsp;|&nbsp; <strong>Director:</strong> {{ item.director }}{% endif %}
+      {% if item.date %} &nbsp;|&nbsp; <strong>Date:</strong> {{ item.date }}{% endif %}
+    </p>
     {% if item.notes %}
-    <div class="details">{{ item.notes }}</div>
+      <div class="details">{{ item.notes }}</div>
     {% endif %}
   </div>
   {% endfor %}
