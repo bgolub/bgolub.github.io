@@ -18,7 +18,7 @@
 
   {% for item in concert.list %}
   <div class="item">
-    <h3 class="work">{{ item.title | default: item.program }}</h3>
+    <strong class="work">{{ item.title | default: item.program }}</strong>
     <p class="meta">
       {% if item.role %}<strong>Role:</strong> {{ item.role }}{% endif %}
       {% if item.company %} &nbsp;|&nbsp; <strong>Company/Ensemble:</strong> {{ item.company }}{% elsif item.ensemble %} &nbsp;|&nbsp; <strong>Ensemble:</strong> {{ item.ensemble }}{% endif %}

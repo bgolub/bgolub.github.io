@@ -18,7 +18,7 @@
 
   {% for item in opera.list %}
   <div class="item">
-    <h3 class="work">{{ item.production | default: item.work }}</h3>
+    <strong class="work">{{ item.production | default: item.work }}</strong>
     <p class="meta">
       {% if item.role %}<strong>Role:</strong> {{ item.role }}{% endif %}
       {% if item.company %} &nbsp;|&nbsp; <strong>Company:</strong> {{ item.company }}{% endif %}
