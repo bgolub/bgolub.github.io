@@ -1,20 +1,134 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Benjamin Golub</title>
+  <meta name="description" content="Benjamin Golub - Software engineer.">
+  <meta property="og:title" content="Benjamin Golub">
+  <meta property="og:description" content="Benjamin Golub - Software engineer.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.benjamingolub.com/">
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #ffffff;
+      --text: #1a1a1a;
+      --dim: #666666;
+      --link: #0969da;
+      --link-hover: #0550ae;
+    }
 
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #121212;
+        --text: #e6edf3;
+        --dim: #8b949e;
+        --link: #58a6ff;
+        --link-hover: #79c0ff;
+      }
+    }
 
-{% include career-profile.html %}
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-{% include opera-experience.html %}
+    body {
+      font-family: ui-monospace, "SF Mono", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      font-size: 15px;
+      line-height: 1.6;
+      background: var(--bg);
+      color: var(--text);
+      padding: 56px 24px;
+    }
 
-{% include concert-experience.html %}
+    main {
+      max-width: 560px;
+      margin: 0 auto;
+    }
 
-{% include awards.html %}
+    h1 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      margin-bottom: 4px;
+    }
 
-{% include training-education.html %}
+    .bio {
+      color: var(--dim);
+      margin-bottom: 36px;
+    }
 
-{% unless site.data.data.sidebar.education %}
-  {% include education.html %}
-{% endunless %}
+    h2 {
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--dim);
+      margin-bottom: 16px;
+    }
 
-{% include contact.html %}
+    ul {
+      list-style: none;
+    }
+
+    li {
+      margin-bottom: 10px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .label {
+      width: 110px;
+      flex-shrink: 0;
+      color: var(--dim);
+    }
+
+    a {
+      color: var(--link);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    a:hover {
+      color: var(--link-hover);
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Benjamin Golub</h1>
+    <p class="bio">Software engineer.</p>
+
+    <h2>Find Me</h2>
+    <ul>
+      <li>
+        <span class="label">Email:</span>
+        <a href="mailto:benjamin.golub@gmail.com">benjamin.golub@gmail.com</a>
+      </li>
+      <li>
+        <span class="label">GitHub:</span>
+        <a href="https://github.com/bgolub" rel="me">github.com/bgolub</a>
+      </li>
+      <li>
+        <span class="label">LinkedIn:</span>
+        <a href="https://www.linkedin.com/in/bgolub" rel="me">linkedin.com/in/bgolub</a>
+      </li>
+      <li>
+        <span class="label">Threads:</span>
+        <a href="https://www.threads.net/@bgolub" rel="me">@bgolub</a>
+      </li>
+      <li>
+        <span class="label">Instagram:</span>
+        <a href="https://www.instagram.com/bgolub" rel="me">@bgolub</a>
+      </li>
+      <li>
+        <span class="label">Facebook:</span>
+        <a href="https://facebook.com/bgolub" rel="me">facebook.com/bgolub</a>
+      </li>
+    </ul>
+  </main>
+</body>
+</html>
